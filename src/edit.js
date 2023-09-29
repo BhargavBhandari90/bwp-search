@@ -26,12 +26,15 @@ import { useBlockProps } from '@wordpress/block-editor';
  * @return {WPElement} Element to render.
  */
 export default function Edit({ attributes, setAttributes }) {
+
+	console.log(attributes);
+
 	const blockProps = useBlockProps();
 	return (
 		<div {...blockProps}>
 			<TextControl
 				value={attributes.message}
-				onChange={(val) => setAttributes({ message: val })}
+				onChange={(val) => setAttributes({ message: val, test: val })}
 			/>
 		</div>
 	);
