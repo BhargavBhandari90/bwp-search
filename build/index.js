@@ -59,8 +59,10 @@ function Edit({
     onChange: val => setAttributes({
       message: val,
       test: val
-    })
-  }));
+    }),
+    label: "Sample Lable",
+    help: "Help Text goes here"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.Button, null, "Click Me!"));
 }
 
 /***/ }),
