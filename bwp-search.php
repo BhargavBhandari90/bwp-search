@@ -24,3 +24,24 @@ function create_block_bwp_search_block_init() {
 	register_block_type( __DIR__ . '/build' );
 }
 add_action( 'init', 'create_block_bwp_search_block_init' );
+
+function create_block_custom_cat( $block_categories, $block_editor_context ) {
+
+	if ( $block_editor_context->post ) {
+
+		array_push(
+			$block_categories,
+			array(
+				'slug'  => 'bwp-plugins',
+				'title' => __( 'BWP Plugins', 'bwp-search' ),
+				'icon'  => '',
+			)
+		);
+
+	}
+
+	return $block_categories;
+
+}
+
+add_filter( 'block_categories_all', 'create_block_custom_cat', 10, 2 );

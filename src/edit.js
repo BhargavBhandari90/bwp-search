@@ -3,7 +3,8 @@
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-components/
  */
-import { TextControl, Button } from '@wordpress/components';
+import { TextControl } from '@wordpress/components';
+import { __ } from '@wordpress/i18n';
 
 /**
  * React hook that is used to mark the block wrapper element.
@@ -35,10 +36,7 @@ export default function Edit({ attributes, setAttributes }) {
 			<TextControl
 				value={attributes.message}
 				onChange={(val) => setAttributes({ message: val, test: val })}
-				label="Sample Lable"
-				help="Help Text goes here"
 			/>
-			<Button>Click Me!</Button>
 		</div>
 	);
 }
