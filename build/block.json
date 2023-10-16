@@ -12,6 +12,9 @@
       "type": "string",
       "source": "text",
       "selector": "div"
+    },
+    "text_color": {
+      "type": "string"
     }
   },
   "supports": {
