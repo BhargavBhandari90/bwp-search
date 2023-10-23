@@ -349,7 +349,7 @@ module.exports = window["wp"]["primitives"];
   \************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/bwp-search","version":"0.1.0","title":"Bwp Search","category":"bwp-plugins","icon":"flag","description":"A Gutenberg block to show your pride! This block enables you to type text and style it with the color font Gilbert from Type with Pride.","attributes":{"message":{"type":"string","source":"text","selector":"div"},"text_color":{"type":"string"},"is_bold":{"type":"boolean"}},"supports":{"html":false},"textdomain":"bwp-search","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/bwp-search","version":"0.1.0","title":"Bwp Search","category":"bwp-plugins","icon":"flag","description":"A Gutenberg block to show your pride! This block enables you to type text and style it with the color font Gilbert from Type with Pride.","attributes":{"message":{"type":"string","source":"text","selector":"div","default":""},"text_color":{"type":"string"},"is_bold":{"type":"boolean"}},"supports":{"html":false},"textdomain":"bwp-search","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

@@ -28,9 +28,7 @@ import { formatBold, formatItalic, link } from '@wordpress/icons';
  * @return {WPElement} Element to render.
  */
 export default function Edit({ attributes, setAttributes }) {
-
 	console.log(attributes);
-
 	const colors = [
 		{ name: 'red', color: '#f00' },
 		{ name: 'white', color: '#fff' },
