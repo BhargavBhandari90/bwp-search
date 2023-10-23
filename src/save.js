@@ -24,7 +24,8 @@ export default function save({ attributes }) {
 		{...blockProps}
 		style={
 			{
-				color: attributes.text_color
+				color: attributes.text_color,
+				fontWeight: attributes.is_bold ? 'bold' : ''
 			}
 		}
 		>{attributes.message}</div>

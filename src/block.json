@@ -15,6 +15,9 @@
 		},
 		"text_color": {
 			"type": "string"
+		},
+		"is_bold": {
+			"type": "boolean"
 		}
 	},
 	"supports": {

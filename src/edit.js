@@ -3,7 +3,7 @@
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-components/
  */
-import { TextControl, ColorPalette } from '@wordpress/components';
+import { TextControl, ColorPalette, ToolbarButton } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 
 /**
@@ -12,7 +12,8 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls, BlockControls } from '@wordpress/block-editor';
+import { formatBold, formatItalic, link } from '@wordpress/icons';
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -40,21 +41,40 @@ export default function Edit({ attributes, setAttributes }) {
 		setAttributes( { text_color : color } );
 	}
 
+	const setBold = () => {
+		if ( attributes.is_bold ) {
+			setAttributes( { is_bold : false } );
+		} else {
+			setAttributes( { is_bold : true } );
+		}
+	}
+
 	const blockProps = useBlockProps();
 	return (
 		<div {...blockProps}>
-		<InspectorControls>
-			<ColorPalette
-				colors={ colors }
-				onChange={ setTextColor }
-				value={ attributes.text_color }
-			/>
-		</InspectorControls>
+			<BlockControls>
+				<ToolbarButton
+					icon={ formatBold }
+					label="Bold"
+					onClick={ setBold }
+					isPressed = {attributes.is_bold}
+				/>
+			</BlockControls>
+			<InspectorControls>
+				<ColorPalette
+					colors={ colors }
+					onChange={ setTextColor }
+					value={ attributes.text_color }
+				/>
+			</InspectorControls>
 			<TextControl
 				value={attributes.message}
 				onChange={(val) => setAttributes({ message: val })}
 				style={
-					{ color: attributes.text_color }
+					{
+						color: attributes.text_color,
+						fontWeight: attributes.is_bold ? 'bold' : ''
+					}
 				}
 			/>
 		</div>
