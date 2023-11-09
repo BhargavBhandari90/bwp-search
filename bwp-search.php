@@ -45,3 +45,5 @@ function create_block_custom_cat( $block_categories, $block_editor_context ) {
 }
 
 add_filter( 'block_categories_all', 'create_block_custom_cat', 10, 2 );
+
+include plugin_dir_path( __FILE__ ) . 'includes/shortcode.php';

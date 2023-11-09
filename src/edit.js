@@ -68,12 +68,6 @@ export default function Edit({ attributes, setAttributes }) {
 			<TextControl
 				value={attributes.message}
 				onChange={(val) => setAttributes({ message: val })}
-				style={
-					{
-						color: attributes.text_color,
-						fontWeight: attributes.is_bold ? 'bold' : ''
-					}
-				}
 			/>
 		</div>
 	);

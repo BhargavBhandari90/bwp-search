@@ -22,12 +22,6 @@ export default function save({ attributes }) {
 	return (
 		<div
 		{...blockProps}
-		style={
-			{
-				color: attributes.text_color,
-				fontWeight: attributes.is_bold ? 'bold' : ''
-			}
-		}
-		>{attributes.message}</div>
+		>[bwp_search]</div>
 	);
 }

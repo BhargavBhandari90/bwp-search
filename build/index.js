@@ -125,11 +125,7 @@ function Edit({
     value: attributes.message,
     onChange: val => setAttributes({
       message: val
-    }),
-    style: {
-      color: attributes.text_color,
-      fontWeight: attributes.is_bold ? 'bold' : ''
-    }
+    })
   }));
 }
 
@@ -239,12 +235,8 @@ function save({
 }) {
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps.save();
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    ...blockProps,
-    style: {
-      color: attributes.text_color,
-      fontWeight: attributes.is_bold ? 'bold' : ''
-    }
-  }, attributes.message);
+    ...blockProps
+  }, "[bwp_search]");
 }
 
 /***/ }),
