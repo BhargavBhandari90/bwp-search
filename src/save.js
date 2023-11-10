@@ -20,8 +20,6 @@ import { useBlockProps } from '@wordpress/block-editor';
 export default function save({ attributes }) {
 	const blockProps = useBlockProps.save();
 	return (
-		<div
-		{...blockProps}
-		>[bwp_search]</div>
+		<div {...blockProps}>[bwp_search]</div>
 	);
 }
