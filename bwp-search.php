@@ -21,9 +21,18 @@
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function create_block_bwp_search_block_init() {
-	register_block_type( __DIR__ . '/build' );
+	register_block_type(
+		__DIR__ . '/build',
+		array(
+			'render_callback' => 'render_block_bwp_search',
+		)
+	);
 }
 add_action( 'init', 'create_block_bwp_search_block_init' );
+
+function render_block_bwp_search() {
+	return do_shortcode( '[bwp_search]' );
+}
 
 function create_block_custom_cat( $block_categories, $block_editor_context ) {
 

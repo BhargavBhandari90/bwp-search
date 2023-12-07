@@ -14,6 +14,7 @@ import { __ } from '@wordpress/i18n';
  */
 import { useBlockProps, InspectorControls, BlockControls } from '@wordpress/block-editor';
 import { formatBold, formatItalic, link } from '@wordpress/icons';
+import ServerSideRender from '@wordpress/server-side-render';
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -27,8 +28,8 @@ import { formatBold, formatItalic, link } from '@wordpress/icons';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit({ attributes, setAttributes }) {
-	console.log(attributes);
+export default function Edit({ attributes, isSelected, setAttributes }) {
+	console.log(isSelected);
 	const colors = [
 		{ name: 'red', color: '#f00' },
 		{ name: 'white', color: '#fff' },
@@ -65,10 +66,17 @@ export default function Edit({ attributes, setAttributes }) {
 					value={ attributes.text_color }
 				/>
 			</InspectorControls>
-			<TextControl
-				value={attributes.message}
-				onChange={(val) => setAttributes({ message: val })}
-			/>
+			{ isSelected ? (
+				<TextControl
+					value={attributes.message}
+					onChange={(val) => setAttributes({ message: val })}
+				/>
+				) : (
+					<ServerSideRender
+						block="create-block/bwp-search"
+					/>
+				)
+			}
 		</div>
 	);
 }
