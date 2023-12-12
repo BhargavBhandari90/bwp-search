@@ -29,7 +29,8 @@ import ServerSideRender from '@wordpress/server-side-render';
  * @return {WPElement} Element to render.
  */
 export default function Edit({ attributes, isSelected, setAttributes }) {
-	console.log(isSelected);
+	setAttributes( { post_type : "post" } );
+	console.log(attributes);
 	const colors = [
 		{ name: 'red', color: '#f00' },
 		{ name: 'white', color: '#fff' },
@@ -66,17 +67,9 @@ export default function Edit({ attributes, isSelected, setAttributes }) {
 					value={ attributes.text_color }
 				/>
 			</InspectorControls>
-			{ isSelected ? (
-				<TextControl
-					value={attributes.message}
-					onChange={(val) => setAttributes({ message: val })}
-				/>
-				) : (
-					<ServerSideRender
-						block="create-block/bwp-search"
-					/>
-				)
-			}
+			<ServerSideRender
+				block="create-block/bwp-search"
+			/>
 		</div>
 	);
 }

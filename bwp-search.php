@@ -22,10 +22,7 @@
  */
 function create_block_bwp_search_block_init() {
 	register_block_type(
-		__DIR__ . '/build',
-		array(
-			'render_callback' => 'render_block_bwp_search',
-		)
+		__DIR__ . '/build'
 	);
 }
 add_action( 'init', 'create_block_bwp_search_block_init' );

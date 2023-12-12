@@ -8,17 +8,8 @@
   "icon": "flag",
   "description": "A Gutenberg block to show your pride! This block enables you to type text and style it with the color font Gilbert from Type with Pride.",
   "attributes": {
-    "message": {
-      "type": "string",
-      "source": "text",
-      "selector": "div",
-      "default": ""
-    },
-    "text_color": {
+    "post_type": {
       "type": "string"
-    },
-    "is_bold": {
-      "type": "boolean"
     }
   },
   "supports": {
@@ -27,5 +18,6 @@
   "textdomain": "bwp-search",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
-  "style": "file:./style-index.css"
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
 }
