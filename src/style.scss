@@ -16,3 +16,27 @@
 // 	font-size: 64px;
 // 	// color: red;
 // }
+
+.bwp-search-wrap {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#search-sidebar {
+    width: 30%;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+#search-results {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.result-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
