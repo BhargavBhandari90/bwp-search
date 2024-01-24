@@ -8,7 +8,7 @@ wp_enqueue_script( 'jquery' );
             <button type="submit">Search</button>
         </form>
         <script>
-        var ajaxurl = '<?php echo trailingslashit( site_url() ) . '/wp-json/wp/v2/posts'; ?>';
+        var ajaxurl = '<?php echo trailingslashit( site_url() ) . 'wp-json/wp/v2/' . $attributes['post_type']. '/?per_page=' . $attributes['number_of_results']; ?>';
         jQuery(document).ready(function($) {
 
             jQuery(document).on('submit', '#search-form', function(e) {
