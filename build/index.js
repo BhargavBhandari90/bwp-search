@@ -263,7 +263,7 @@ module.exports = window["wp"]["serverSideRender"];
   \************************/
 /***/ (function(module) {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/bwp-search","version":"0.1.0","title":"Bwp Search","category":"bwp-plugins","icon":"flag","description":"A Gutenberg block to show your pride! This block enables you to type text and style it with the color font Gilbert from Type with Pride.","attributes":{"post_type":{"type":"string"},"number_of_results":{"type":"integer","default":5}},"supports":{"html":false},"textdomain":"bwp-search","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"create-block/bwp-search","version":"0.1.0","title":"Bwp Search","category":"bwp-plugins","icon":"flag","description":"A Gutenberg block to show your pride! This block enables you to type text and style it with the color font Gilbert from Type with Pride.","keywords":["filter","bili"],"attributes":{"post_type":{"type":"string"},"number_of_results":{"type":"integer","default":5}},"supports":{"html":false,"color":{"background":false,"text":true}},"textdomain":"bwp-search","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css","render":"file:./render.php"}');
 
 /***/ })
 

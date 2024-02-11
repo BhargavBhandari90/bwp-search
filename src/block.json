@@ -7,6 +7,7 @@
 	"category": "bwp-plugins",
 	"icon": "flag",
 	"description": "A Gutenberg block to show your pride! This block enables you to type text and style it with the color font Gilbert from Type with Pride.",
+	"keywords": [ "filter", "bili" ],
 	"attributes": {
 		"post_type": {
 			"type": "string"
@@ -17,7 +18,11 @@
 		}
 	},
 	"supports": {
-		"html": false
+		"html": false,
+		"color": {
+			"background": false,
+			"text": true
+		}
 	},
 	"textdomain": "bwp-search",
 	"editorScript": "file:./index.js",
