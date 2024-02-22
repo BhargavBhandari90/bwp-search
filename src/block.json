@@ -10,7 +10,8 @@
 	"keywords": [ "filter", "bili" ],
 	"attributes": {
 		"post_type": {
-			"type": "string"
+			"type": "string",
+			"default" : "post"
 		},
 		"number_of_results" : {
 			"type" : "integer",
